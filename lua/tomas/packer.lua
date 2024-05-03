@@ -12,12 +12,12 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  
+
   use({
-	  'AlexvZyl/nordic.nvim',
-	  as = 'nordic',
+      'morhetz/gruvbox',
+	  as = 'gruvbox',
 	  config = function()
-		  vim.cmd('colorscheme nordic')
+		  vim.cmd('colorscheme gruvbox')
 	  end
   })
 
@@ -55,7 +55,17 @@ return require('packer').startup(function(use)
   }
 
   use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+      "nvim-lualine/lualine.nvim",
+      requires = { "nvim-tree/nvim-web-devicons", opt = true }
   }
+
+  use("m4xshen/autoclose.nvim")
+
+  use({
+      "stevearc/conform.nvim",
+      config = function()
+          require("conform").setup()
+      end,
+  })
+  use("mfussenegger/nvim-lint")
 end)

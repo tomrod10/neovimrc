@@ -5,6 +5,10 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Save & Save and Quit
+vim.keymap.set("n", "<leader>w", ":update<CR>", { silent = true })
+vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
+
 -- Appends line below to end of line where cursor is without moving cursor
 vim.keymap.set("n", "J", "mzJ`z")
 
@@ -17,16 +21,16 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Allows to cut and paste without losing our copies term in the buffer
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", '"_dP')
 
 -- Allows to copy from nvim to device clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>Y", '"+Y')
 
 -- Something about deleting the clipboard buffer
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
 
 -- Prevents me from going to the worst place in the universe
 vim.keymap.set("n", "Q", "<nop>")

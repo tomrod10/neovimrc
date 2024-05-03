@@ -1,4 +1,6 @@
 require("tomas.set")
 require("tomas.remap")
 require("tomas.lualine")
-
+require("tomas.autoclose")
+require("tomas.linting")
+require("tomas.formatter")
